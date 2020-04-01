@@ -14,5 +14,6 @@ RUN apt-get update && apt-get install -y \
 
 WORKDIR /     
 RUN git clone https://github.com/NVIDIA/apex && cd apex && pip install -v --no-cache-dir --global-option="--cpp_ext" --global-option="--cuda_ext" ./
+RUN conda install -c conda-forge gdcm
 
 WORKDIR /workspace
